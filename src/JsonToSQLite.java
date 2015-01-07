@@ -158,9 +158,6 @@ public class JsonToSQLite {
 
 
 	void createTables(TableObjs fieldObjs, Statement statement) throws SQLException, IllegalArgumentException, IllegalAccessException{
-		//if(fieldObjs.getChild() != null){
-		//	createTables(fieldObjs.getChild(), statement);
-		//}
 		for (TableObjs fo : fieldObjs.getChildList()) {
 			createTables(fo, statement);
 		}
